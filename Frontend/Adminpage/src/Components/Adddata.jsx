@@ -36,7 +36,7 @@ const Adddata = () => {
     console.log("Product data being sent to backend:", productData); // Log the data being sent
   
     try {
-      const response = await axios.post('http://localhost:5000/api/products/add', productData);
+      const response = await axios.post('https://full-stackproject-wk3s.onrender.com/api/products/add', productData);
       console.log("Response from server:", response.data);
       setSavedProduct(response.data.savedProduct);
       alert('Product added successfully!');
