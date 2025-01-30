@@ -9,7 +9,11 @@ const app = express();
 const getuser=require('../Backend/routes/getuserdetailsroutes');
 
 // Enable CORS for all origins (this will allow any domain to access your server)
-app.use(cors());
+app.use(cors({
+  origin: "https://frontend123-vmuj.onrender.com", // Your frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+}));
 
 // Alternatively, you can specify only one or more origins:
 // app.use(cors({
